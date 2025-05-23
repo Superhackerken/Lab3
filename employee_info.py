@@ -15,10 +15,10 @@ def get_employees_by_age_range(age_lower_limit, age_upper_limit):
     for item in employee_data:
         if int(item["age"]) > int(age_lower_limit) and int(item["age"]) < int(age_upper_limit):
             result.append(item)
-
+    print(result)
     return result
 
-def calculate_average_salary():
+def calculate_average_salary(employee_data):
     total = 0
     average = 0
     for employee in employee_data:
@@ -69,7 +69,7 @@ def display_main_menu():
         display_all_records()
 
     elif option == '2':
-        average_salary = calculate_average_salary()
+        average_salary = calculate_average_salary(employee_data)
         print("Average salary = " + str(average_salary))
 
     elif option == '3':
